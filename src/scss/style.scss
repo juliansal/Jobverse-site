@@ -1,0 +1,444 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+
+$bg_opt_one: #34495E;
+$bg_opt_two: #179d6c;
+$labels: #9B9B9B;
+$btn_border: rgba(0, 0, 0, 0.3);
+$purple: #c71ec7;
+$grey: #999999;
+$white: #fff;
+
+.clear:before, .clear:after {
+  content: ' ';
+  display: table; }
+
+.clear {
+  *zoom: 1; }
+  .clear:after {
+    clear: both; }
+
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility; }
+    
+ .wrapper {
+	  margin: 20px auto;
+ 	  max-width: 960px;
+ }
+ 
+.wrapper-results {
+	margin: 20px auto;
+	max-width: 1100px;
+	display: flex;
+ }
+ 
+ body {
+	background-color: $bg_opt_one;
+	color: $white;
+	font-family: 'Roboto';
+	font-weight: 400;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+h1 {
+	font-size: 64px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 44px;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 34px;
+	font-weight: 300;
+}
+
+h4 {
+	font-size: 22px;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 22px;
+	font-weight: 300;
+}
+
+h6 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 300;
+}
+  
+/*******  Main Layouts  ********/
+  
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+ 	justify-content: flex-end;
+}
+
+.logo {
+ 	margin-right: 10%;
+}
+
+.sign-up {
+	margin-right: auto;
+}
+
+.nav-btn {
+	margin-left: 0.5rem;
+}
+
+.headline {
+	text-align: center;
+	margin-top: 60px;
+}
+
+.form-container {
+	margin-top: 60px;
+}
+
+.basic-fields, .row {
+ 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.form-label-inline {
+ 	display: inline-block;
+}
+
+.form-label {
+  	display: block;
+}
+
+.advanced-fields {
+	margin-top: 40px;
+}
+
+.expand-search {
+	display: flex;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 60px;
+	justify-content: space-between;
+		
+	.featured-jobs {
+		border-right: 1px solid white;
+	}
+	
+	.features {
+		flex-grow: 1;
+ 		padding: 0 3%;
+ 		width: 480px;
+ 		
+ 		h3 {
+	 		text-align: center;
+	 		margin: 15px 0;
+ 		}
+	}
+}
+/*******  End Layouts  ********/
+
+/*******   Styling   *******/
+
+.logo {
+	font-size: 34px;
+	
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.btn {
+ 	border : 0px solid black;
+	border-radius : 3px;
+	box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+ 	font-size : 20px;
+	color : $white;
+	padding : 13px 40px;
+	background-color : $purple;
+	
+	&:hover {
+		box-shadow : 0px 0px 8px rgba(0,0,0,0.9);
+
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-right: auto;
+	
+	&:hover .dropdown-content {
+		display: block;
+	}
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	
+	a {
+		padding: 10px;
+		display: block;
+		background-color: $bg_opt_one;
+
+		&:hover {
+			background-color: $purple;
+		}
+	}
+}
+
+.nav-btn {
+	margin-top: 9px;
+	
+	a {
+		text-decoration: none;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		padding: 10px;
+		border-radius: 5px;
+		font-size : 20px;
+		
+		&:hover {
+			box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+		}
+	}
+
+}
+
+.form-field {
+	border: 0px solid black;
+	border-radius: 5px;
+	padding: 15px;
+ 	width: 100%;
+	box-shadow : 0px 0px 7px rgba(0,0,0,0.8);
+	
+	&:focus {
+		box-shadow : 0px 0px 14px rgba(0,0,0,1);
+	} 
+}
+
+.basic {
+  	flex: 1 260px;
+ 	
+ 	.form-field {
+	 	width: 88%;
+ 	}
+}
+
+#expanded-form-fields {
+	display: none;
+}
+
+.advanced-fields {
+ 	width: 75%;
+}
+
+.form-label-inline, .min-range {
+	margin-right: 20px;
+}
+
+select {
+	width: 140px;
+	height: 40px;
+	overflow: hidden;
+	padding-left: 10px;
+	background: url("../img/dropdown.png") no-repeat right #fff;
+ 	border: 1px solid $purple;
+ 	border-radius: 6px;
+	appearance: none;
+	box-shadow : 0px 0px 7px rgba(0,0,0,0.8);
+			
+	option {
+		padding-left: 10px;
+	}
+	
+	&:focus {
+		box-shadow : 0px 0px 14px rgba(0,0,0,1);
+	} 
+}
+
+.sort-results label {
+	margin-right: 22px;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    vertical-align:middle;
+    cursor:pointer;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+  border: 2px solid black;
+  margin-right: 10px;
+}
+
+input[type="radio"]:checked + label span{
+     background-color: $purple;
+}
+
+.form-label {
+	font-size: 12px;
+	color: $labels;
+	padding-left: 25px;
+	padding-top: 5px
+}
+
+.features h3 {
+	display: flex;
+	justify-content: center;
+	
+	span {
+		display: block;
+		border-bottom: 2px solid $purple;
+	}
+}
+
+.featured-jobs {
+	h4 {
+ 		margin-bottom: 0px;
+	}
+	
+	p {
+  		margin-top: 3px;
+	}
+}
+
+.ui-slider {
+	margin-bottom: 130px;
+}
+
+.noUi-value {
+	color: white;
+}
+
+#pips-range {
+	display: inline-block;
+	width: 73%;
+}
+
+.noUi-handle {
+	border: none;
+	background: $purple;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*******  Results Page  *******/
+
+
+
+#filters {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 3px;
+	padding: 10px;
+}
+
+#jobs {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#side-ad {
+	
+}
+
+.job-tile {
+	background: white;
+	border-radius: 8px;
+	padding: 10px;
+	display: flex;
+	
+	a {
+		color: black;
+	}
+}
+
+.company-icon img {
+	width: 100px;
+	height: 100px;
+	border-radius: 3px;
+}
+
+.job-desc {
+	padding: 0 15px;
+	
+	h4 {
+		margin: 0;
+	}
+	
+	p {
+		margin: 6px 0;
+		font-size: 13px;
+	}
+}
+
+.job-meta span {
+	margin-right: 10px;
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: 400;
+	color: $grey;
+}
+
+
+.job-type {
+	width: 100px;
+	margin: auto;
+	
+	p {
+		color: red;
+	}
+}
+
+
+
+/*******  Media Queries  *******/
+
+$break-tablet: 874px;
+$break-phone: 400px;
+
+@media (max-width: $break-tablet) {
+	.advanced-fields > div, select {
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: $break-phone) {
+	
+}
+
+
+
+
+

@@ -1,0 +1,279 @@
+<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+    <title>Jobverse - Job Search the Known Universe</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/nouislider.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+
+		<header class="header" role="banner">
+			<nav class="nav" role="navigation">
+				<div class="logo">
+					<a href="/">
+						Jobverse
+					</a>
+				</div>
+				<div class="dropdown">
+					<input type="button" class="filled-in btn" value="Sign Up">
+					<div class="dropdown-content">
+						<a href="#">You're an Employer</a>
+						<a href="#">You're looking for Work</a>
+					</div>
+				</div>
+				<div class="nav-btn clear">
+					<a href="#">Upload Your Resume</a>
+				</div>
+				<div class="nav-btn">
+					<a href="#">Post a Job</a>
+				</div>
+				<div class="nav-btn">
+					<a href="#">Sign In</a>
+				</div>
+			</nav>
+		</header>
+	
+		<section class="main" role="main">
+			<div class="headline">
+				<h1>Job Results</h1>
+			</div>
+			<div class="job-search">
+				<form id="search-form" class="form-container">
+					<div class="basic-fields">
+						<div class="basic">
+							<input name="job-title" class="form-field" type="text" placeholder="Job title, keyword">
+							<label class="form-label">Enter the job title or a keyword</label>
+						</div>
+						<div class="basic">
+							<input name="job-location" class="form-field" type="text" placeholder="City, State">
+							<label class="form-label">Enter the City or State</label>
+						</div>
+						<div class="basic-btn">
+							<input type="button" class="filled-in btn" value="Search Jobs">
+						</div>
+					</div>
+					<div class="hidden" id="expanded-form-fields">
+						<div class="advanced-fields">
+							<div class="ui-slider">
+								<label class="form-label-inline">Distance form Location:</label>
+								<div id="pips-range"></div>
+							</div>
+						</div>
+						<div class="row advanced-fields">
+							<div class="job-type">
+								<label class="form-label-inline">Job type:</label>
+								<select class="jobs-types">
+									<option>Full-time</option>
+									<option>Part-time</option>
+									<option>Temporary</option>
+									<option>Internship</option>
+									<option>Freelance</option>
+								</select>
+							</div>
+							<div class="salary-range">
+								<label class="form-label-inline">Salary Range:</label>
+								<select class="min-range">
+									<option>$ 0</option>
+									<option>$ 40,000</option>
+									<option>$ 50,000</option>
+									<option>$ 60,000</option>
+									<option>$ 70,000</option>
+									<option>$ 80,000</option>
+									<option>$ 90,000</option>
+									<option>$ 100,000</option>
+									<option>$ 120,000</option>
+								</select>
+								<select class="max-range">
+									<option>$ 40,000</option>
+									<option>$ 50,000</option>
+									<option>$ 60,000</option>
+									<option>$ 70,000</option>
+									<option>$ 80,000</option>
+									<option>$ 90,000</option>
+									<option>$ 100,000</option>
+									<option>$ 120,000</option>
+									<option>No limit</option>
+								</select>
+							</div>
+						</div>
+						<div class="row advanced-fields">
+							<div class="results-ppage">
+								<label class="form-label-inline">Results per page:</label>
+								<select class="per-page">
+									<option>10</option>
+									<option>20</option>
+									<option>40</option>
+									<option>60</option>
+									<option>100</option>
+								</select>
+							</div>
+							<div class="published-range">
+								<label class="form-label-inline">Age of jobs published:</label>
+								<select class="jobs-age">
+									<option>today</option>
+									<option>within 3 days</option>
+									<option>within 5 days</option>
+									<option>within 10 days</option>
+									<option>within 15 days</option>
+									<option>within 30 days</option>
+									<option>within 90 days</option>
+									<option>within 180 days</option>
+								</select>
+							</div>
+						</div>
+						<div class="row advanced-fields">
+							<div class="sort-results">
+								<label class="form-label-inline">Sort result by:</label>
+								<input type="radio" id="radio-rel" name="radio" />
+								<label for="radio-rel"><span></span>Relevance</label>
+								<input type="radio" id="radio-date" name="radio" />
+								<label for="radio-date"><span></span>Date</label>
+							</div>
+						</div>
+						<div class="advanced-fields">
+							<input name="exclude-words" class="form-field" type="text" placeholder="NONE of these keywords">
+							<label class="form-label">Exclude results with these words</label>
+						</div>
+						<div class="advanced-fields">
+							<input name="include-words" class="form-field" type="text" placeholder="Include ALL these keywords">
+							<label class="form-label">Enter all the words you want every result to contain</label>
+						</div>
+						<div class="advanced-fields">
+							<input name="atleast-words" class="form-field" type="text" placeholder="At LEAST one of thse keywords">
+							<label class="form-label">List the words you want to search for</label>
+						</div>
+						<div class="advanced-fields">
+							<input name="exact-words" class="form-field" type="text" placeholder="Include EXACT phrase">
+							<label class="form-label">Enter word for word a phrase you want results to contain</label>
+						</div>
+						<div class="advanced-fields">
+							<input name="specify-company" class="form-field" type="text" placeholder="Specify Company">
+							<label class="form-label">Enter a specific company name to search jobs by</label>
+						</div>
+					</div>
+					<div class="expand-search">
+						<input type="button" id="advancedBtn" class="filled-in btn" value="Advanced Search">												</div>
+				</form>
+			</div>
+			
+			<div class="sorter">
+				<hr>
+				<div>
+					<div class="sort-results">
+						<label class="form-label-inline">Sort result by:</label>
+						<input type="radio" id="radio-rel2" name="radio2" />
+						<label for="radio-rel2"><span></span>Relevance</label>
+						<input type="radio" id="radio-date2" name="radio2" />
+						<label for="radio-date2"><span></span>Date</label>
+					</div>
+				</div>
+				<hr>
+			</div>
+		</section>
+	</div>
+	
+	<div class="wrapper-results" role="results">
+		<div id="filters">
+			<h3>Filters:</h3>
+			<label class="form-label">Job type</label>
+			<select class="jobs-filter">
+				<option>Full-time</option>
+				<option>Part-time</option>
+				<option>Temporary</option>
+				<option>Internship</option>
+				<option>Freelance</option>
+			</select>
+			<label class="form-label">Distance</label>
+			<select class="dist-filter">
+				<option>within 5 miles</option>
+				<option>within 10 miles</option>
+				<option>within 15 miles</option>
+				<option>within 25 miles</option>
+				<option>within 50 miles</option>
+			</select>
+			<label class="form-label">Salary Range:</label>
+			<select class="salary-filter">
+				<option>$ 0+</option>
+				<option>$ 40,000+</option>
+				<option>$ 50,000+</option>
+				<option>$ 60,000+</option>
+				<option>$ 70,000+</option>
+				<option>$ 80,000+</option>
+				<option>$ 90,000+</option>
+				<option>$ 100,000+</option>
+				<option>$ 120,000+</option>
+			</select>
+			<label class="form-label">Age of jobs</label>
+			<select class="jobs-age">
+				<option>today</option>
+				<option>within 3 days</option>
+				<option>within 5 days</option>
+				<option>within 10 days</option>
+				<option>within 15 days</option>
+				<option>within 30 days</option>
+				<option>within 90 days</option>
+				<option>within 180 days</option>
+			</select>
+			<label class="form-label">Companies</label>
+			<input type="checkbox" name="company" value="" checked>
+			<input type="checkbox" name="company" value="" checked>
+			<input type="checkbox" name="company" value="" checked>
+			<input type="checkbox" name="company" value="" checked>
+			<input type="checkbox" name="company" value="" checked>
+			<input type="checkbox" name="company" value="" checked>
+			<input type="checkbox" name="company" value="" checked>
+			<a href="#" >more</a>
+			
+		</div>
+		
+		<div id="jobs">
+			<div class="job-tile">
+				<div class="company-icon">
+					<img src="assets/img/twitter.png" alt="twitter logo">
+				</div>
+				<div class="job-desc">
+					<a href="#">
+						<h4>UX Designer</h4>
+						<p>Minimum Required Skills: Java, Spring Framework, Hibernate, Design Patterns, RESTful APIs, Database Development, Algorit...</p>
+						<p class="job-meta"><span> Twitter </span>|<span> Los Angeles, CA </span>|<span> Mar 28 </span></p>
+					</a>
+				</div>
+				<div class="job-type">
+					<p>Full Time</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="side-ad">
+			<a href="#">
+				<img src="assets/img/ad_vert.png" alt="ad">
+			</a>
+		</div>
+		
+	
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+	<script src="assets/js/nouislider.min.js"></script>
+	<script src="assets/js/script.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+</body>
+</html>
