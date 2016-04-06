@@ -357,8 +357,6 @@ input[type="radio"]:checked + label span{
 
 /*******  Results Page  *******/
 
-
-
 #filters {
 	background: rgba(255, 255, 255, 0.8);
 	border-radius: 3px;
@@ -445,7 +443,6 @@ input[type="radio"]:checked + label span{
 				}			
 			}
 		}
-
 	}
 
 	.company-icon img {
@@ -463,22 +460,21 @@ input[type="radio"]:checked + label span{
 		}
 		
 		p {
-			margin: 6px 0;
+			margin: 8px 0;
 			font-size: 13px;
 		}
 	}
 
 	.job-meta {
 		color: $grey;
+		margin-left: 30px;
 		
 		span {
-			margin-right: 10px;
-			margin-left: 10px;
+			margin-right: 30px;
 			font-size: 14px;
 			font-weight: 400;
 		}
 	}
-
 
 	.job-type {
 		width: 100px;
@@ -489,7 +485,6 @@ input[type="radio"]:checked + label span{
 			text-align: right;
 		}
 	}
-	
 }
 
 #side-ad {
@@ -539,6 +534,10 @@ $break-big-phone: 594px;
 	#jobs {
 		margin-left: 1px;
 		margin-right: 1px;
+		
+		span {
+			display: block;
+		}
 	}
 	
 	.basic-fields, .basic .form-field, .advanced-fields {

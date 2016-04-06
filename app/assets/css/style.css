@@ -365,13 +365,13 @@ input[type="radio"]:checked + label span {
     #jobs .job-desc h4 {
       margin: 0; }
     #jobs .job-desc p {
-      margin: 6px 0;
+      margin: 8px 0;
       font-size: 13px; }
   #jobs .job-meta {
-    color: #999999; }
+    color: #999999;
+    margin-left: 30px; }
     #jobs .job-meta span {
-      margin-right: 10px;
-      margin-left: 10px;
+      margin-right: 30px;
       font-size: 14px;
       font-weight: 400; }
   #jobs .job-type {
@@ -408,5 +408,7 @@ input[type="radio"]:checked + label span {
   #jobs {
     margin-left: 1px;
     margin-right: 1px; }
+    #jobs span {
+      display: block; }
   .basic-fields, .basic .form-field, .advanced-fields {
     width: 100%; } }
