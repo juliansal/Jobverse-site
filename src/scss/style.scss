@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:500,400,300,700);
 
 $bg_opt_one: #34495E;
 $bg_opt_two: #179d6c;
@@ -6,6 +6,7 @@ $labels: #9B9B9B;
 $btn_border: rgba(0, 0, 0, 0.3);
 $purple: #c71ec7;
 $grey: #999999;
+$darkgrey: #545454;
 $white: #fff;
 
 .clear:before, .clear:after {
@@ -29,7 +30,7 @@ $white: #fff;
  
 .wrapper-results {
 	margin: 20px auto;
-	max-width: 1100px;
+	max-width: 1200px;
 	display: flex;
  }
  
@@ -362,63 +363,136 @@ input[type="radio"]:checked + label span{
 	background: rgba(255, 255, 255, 0.8);
 	border-radius: 3px;
 	padding: 10px;
+	width: 200px;
+	
+	h3 {
+		font-size: 20px;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	h3, label, a, p, span {
+		color: $darkgrey;
+		font-weight: 400;
+	}
+	
+	span {
+		font-size: 90%;
+	}
+		
+	.form-label {
+		padding-bottom: 8px;
+		padding-top: 16px;
+		padding-left: 1px;
+	}
+	
+	select {
+		width: 99%;
+		padding-left: 2px;
+		box-shadow : 0px 0px 1px rgba(0,0,0,0.8);
+				
+		option {
+			padding-left: 10px;
+		}
+		
+		&:focus {
+			box-shadow : 0px 0px 3px rgba(0,0,0,0.8);
+		} 
+	}
+	
+	input[type="checkbox"] {
+		margin-right: 12px;
+		margin-bottom: 7px;
+	}
+	
 }
 
 #jobs {
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 60px;
+	margin-right: 60px;
+	
+	.job-tile {
+		background: white;
+		border-radius: 8px;
+		padding: 10px;
+		display: flex;
+		margin-bottom: 30px;
+		box-shadow : 0px 0px 7px rgba(0,0,0,0.8);
+		
+		a {
+			display: flex;
+		}
+		
+		&:hover {
+			box-shadow : 0px 0px 15px rgba(0,0,0,1);
+			transition: box-shadow 0.5s ease;
+		}
+	
+		a {
+			color: $darkgrey;
+			
+			p {
+				font-weight: 400;
+			}
+			
+			&:hover {
+				text-decoration: none;
+				
+				h4, p {
+					color: black;
+					transition: color 0.5s ease;
+				}			
+			}
+		}
+
+	}
+
+	.company-icon img {
+		width: 100px;
+		height: 100px;
+		border-radius: 3px;
+		margin: 4px 0 0;
+	}
+	
+	.job-desc {
+		padding: 0 15px;
+		
+		h4 {
+			margin: 0;
+		}
+		
+		p {
+			margin: 6px 0;
+			font-size: 13px;
+		}
+	}
+
+	.job-meta {
+		color: $grey;
+		
+		span {
+			margin-right: 10px;
+			margin-left: 10px;
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+
+
+	.job-type {
+		width: 100px;
+		margin: auto;
+	
+		p {
+			color: red;
+			text-align: right;
+		}
+	}
+	
 }
 
 #side-ad {
-	
-}
-
-.job-tile {
-	background: white;
-	border-radius: 8px;
-	padding: 10px;
-	display: flex;
-	
-	a {
-		color: black;
-	}
-}
-
-.company-icon img {
-	width: 100px;
-	height: 100px;
-	border-radius: 3px;
-}
-
-.job-desc {
-	padding: 0 15px;
-	
-	h4 {
-		margin: 0;
-	}
-	
-	p {
-		margin: 6px 0;
-		font-size: 13px;
-	}
-}
-
-.job-meta span {
-	margin-right: 10px;
-	margin-left: 10px;
-	font-size: 14px;
-	font-weight: 400;
-	color: $grey;
-}
-
-
-.job-type {
-	width: 100px;
-	margin: auto;
-	
-	p {
-		color: red;
-	}
+	width: 160px;
 }
 
 
