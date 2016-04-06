@@ -300,7 +300,8 @@ input[type="radio"]:checked + label span {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 3px;
   padding: 10px;
-  width: 200px; }
+  width: 200px;
+  margin-bottom: 30px; }
   #filters h3 {
     font-size: 20px;
     margin-top: 0;
@@ -385,5 +386,27 @@ input[type="radio"]:checked + label span {
 
 /*******  Media Queries  *******/
 @media (max-width: 874px) {
+  .dropdown {
+    margin-bottom: 30px; }
   .advanced-fields > div, select {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .wrapper, #pips-range {
+    margin-left: 15px;
+    margin-right: 15px; }
+  .basic-fields {
+    display: block; }
+  .wrapper-results {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .wrapper-results #filters, .wrapper-results #side-ad {
+      margin: 0 auto 30px auto; }
+    .wrapper-results #filters {
+      width: 80%; } }
+
+@media (max-width: 594px) {
+  #jobs {
+    margin-left: 1px;
+    margin-right: 1px; }
+  .basic-fields, .basic .form-field, .advanced-fields {
+    width: 100%; } }

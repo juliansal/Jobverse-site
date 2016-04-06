@@ -32,7 +32,7 @@ $white: #fff;
 	margin: 20px auto;
 	max-width: 1200px;
 	display: flex;
- }
+}
  
  body {
 	background-color: $bg_opt_one;
@@ -364,6 +364,7 @@ input[type="radio"]:checked + label span{
 	border-radius: 3px;
 	padding: 10px;
 	width: 200px;
+	margin-bottom: 30px;
 	
 	h3 {
 		font-size: 20px;
@@ -500,16 +501,49 @@ input[type="radio"]:checked + label span{
 /*******  Media Queries  *******/
 
 $break-tablet: 874px;
-$break-phone: 400px;
+$break-big-phone: 594px;
 
 @media (max-width: $break-tablet) {
+	.dropdown {
+		margin-bottom: 30px;
+	}
+	
 	.advanced-fields > div, select {
 		margin-top: 20px;
 	}
+	
+	.wrapper, #pips-range {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	.basic-fields {
+		display: block;
+	}
+	
+	.wrapper-results {
+		flex-wrap: wrap;
+		
+		#filters, #side-ad {
+			margin: 0 auto 30px auto;
+		}
+		
+		#filters {
+			width: 80%;
+		}
+	}
+	
 }
 
-@media (max-width: $break-phone) {
+@media (max-width: $break-big-phone) {
+	#jobs {
+		margin-left: 1px;
+		margin-right: 1px;
+	}
 	
+	.basic-fields, .basic .form-field, .advanced-fields {
+		width: 100%;
+	}
 }
 
 
