@@ -159,6 +159,11 @@ p {
  		}
 	}
 }
+
+.sorter {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 /*******  End Layouts  ********/
 
 /*******   Styling   *******/
@@ -403,7 +408,6 @@ input[type="radio"]:checked + label span{
 		margin-right: 12px;
 		margin-bottom: 7px;
 	}
-	
 }
 
 #jobs {
@@ -445,11 +449,15 @@ input[type="radio"]:checked + label span{
 		}
 	}
 
-	.company-icon img {
-		width: 100px;
-		height: 100px;
-		border-radius: 3px;
-		margin: 4px 0 0;
+	.company-icon {
+		width: 130px;
+	
+		img {
+			width: 100px;
+			height: 100px;
+			border-radius: 3px;
+			margin: 4px 0 0;
+		}
 	}
 	
 	.job-desc {

@@ -145,6 +145,10 @@ p {
       text-align: center;
       margin: 15px 0; }
 
+.sorter {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 /*******  End Layouts  ********/
 /*******   Styling   *******/
 .logo {
@@ -355,11 +359,13 @@ input[type="radio"]:checked + label span {
         #jobs .job-tile a:hover h4, #jobs .job-tile a:hover p {
           color: black;
           transition: color 0.5s ease; }
-  #jobs .company-icon img {
-    width: 100px;
-    height: 100px;
-    border-radius: 3px;
-    margin: 4px 0 0; }
+  #jobs .company-icon {
+    width: 130px; }
+    #jobs .company-icon img {
+      width: 100px;
+      height: 100px;
+      border-radius: 3px;
+      margin: 4px 0 0; }
   #jobs .job-desc {
     padding: 0 15px; }
     #jobs .job-desc h4 {
